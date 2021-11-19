@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* border:1px solid rgb(247, 247, 247); */
+}
+
+body {
+
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+    background-color: rgb(1, 24, 46);
+}
+
+/* 整個月曆 */
+.content {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 1344px;
+    height: 756px;
+    background-image: url(./底圖\(1344x756\).png);
+    margin: 55px auto;
+
+
+}
+
+
+/* 左半部     */
+.left {
+    width: 730px;
+    height: 756px;
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+#yearBar {
+    flex-basis: 100px;
+    padding: 30px;
+}
+
+
+.lastYears {
+    width: 120px;
+    height: 700px;
+    overflow-x: hidden;
+    overflow-y: scroll;   
+}
+
+
+
+.lastYears>a {
+    width: 60px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: black 0.2em 0.2em 0.2em;
+}
+
+.lastYears>a:hover {
+    font-size: 24px;
+    text-shadow: black 0.2em 0.1em 0.1em;
+    color: yellow;
+}
+
+.leftCal {
+    flex-basis: calc(100% - 100px);
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 15px 0;
+}
+
+
+/* calendar */
+.calendar {
+    width: 580px;
+    height: 580px;
+    margin: 100px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: start;
+    text-align: center;
+    color: white;
+    font-size: 130%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+/* 切換月份 */
+.monthSign {
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 560px;
+    padding: 0px 60px 0px -50px;
+    letter-spacing: 3px;
+
+
+}
+
+.lastM, .nextM {
+    font-size: smaller;
+    text-decoration: none;
+}
+
+
+/* 月曆頂端列 */
+.dayoff {
+    color: yellow;
+}
+
+.dayoff cell {
+    color: yellow;
+}
+
+
+.special-date {
+    color: white;
+}
+
+/* 切換月份 */
+.lastM {
+    color: white;
+}
+
+.nextM {
+    color: white;
+}
+
+.number:hover {
+    background-color: rgb(145, 200, 251);
+    border-radius: 50%;
+    line-height: 50px;
+    width: 60%;
+}
+
+.specialDate {
+    color: rgb(253, 253, 177);
+    font-size: 8px;
+    padding-top: 4px;
+}
+
+/* calendar end */
+
+
+
+/* right */
+.right {
+    width: calc(100% - 730px);
+    height: 756px;
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+.rightDate {
+    width: calc(100% - 60px);
+    display: flex;
+    flex-flow: column nowrap;
+    float: left;
+}
+
+
+.cursive {
+    margin: 140px auto 0;
+    /* border:1px solid rgb(247, 247, 247);   */
+}
+
+.dateTitle {
+    color: azure;
+    font-size: 50px;
+    /* border:1px solid rgb(247, 247, 247); */
+    margin-top: 0;
+    flex-basis: 200px;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+
+
+.monthBar {
+    width: 60px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+
+.monthBar>a {
+    width: 60px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: black 0.2em 0.2em 0.2em;
+    /* border:1px solid rgb(247, 247, 247);   */
+}
+
+.yearBar>a {
+    font-size: 18px;
+}
+
+.monthBar>a:hover {
+    font-size: 30px;
+    text-shadow: black 0.2em 0.1em 0.1em;
+    color: yellow;
+}
