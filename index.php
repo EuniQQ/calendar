@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>萬年曆作業</title>
-    <link rel="stylesheet" href="./style_3.css">
+    <title>萬年曆-21張筠臻</title>
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
@@ -18,22 +18,23 @@
 <!-- left-yearBar -->
 <nav id="yearBar">
 
-<!-- 1970-2070版 -->
+<!-- 1970-2070年 -->
 <div class=lastYears>
 <?php
 $mm=date('m');
 for($i=1970;$i<2071;$i++){
-echo "<a href='calendar_3.php?year=$i&month=$mm'>". $i ."</a>" . "<br>"; 
+echo "<a href='index.php?year=$i&month=$mm'>". $i ."</a>" . "<br>"; 
 }
 ?>
 </div>
-
-</nav>
- 
+</nav> 
 
 
 <!-- left-calendar -->
 <main class="leftCal">
+
+<img id="moon" src="./moon.png" alt="月亮" >
+
 
 <?php
     $specialDate=['1-1'=>'元旦','2-28'=>'和平紀念日','3-8'=>'婦女節','4-4'=>'兒童節','5-1'=>'勞動節','8-8'=>'父親節','9-3'=>'軍人節','10-10'=>'國慶日','12-25'=>'聖誕節'];
@@ -101,9 +102,6 @@ echo "<a href='calendar_3.php?year=$i&month=$mm'>". $i ."</a>" . "<br>";
 
     ?>
 
-
-
-
 <!-- calendar  -->
 <div class="calendar">
 
@@ -125,12 +123,12 @@ for($i=0;$i<$allCells;$i++){
     $w=$i%7;
     // is_numeric — 查變數是數字或數字字符串
     if(is_numeric($td[$i])){
-        
         // $date=date("$year-$month-").$td[$i];
         $spDate=date("$month-").$td[$i];
     }else{
         $spDate=null; //使空白部分不會印出前面的spDate
     } 
+    
 
     if($w==0 || $w==6){
         echo "<div class='dayoff cell'>";
@@ -138,39 +136,33 @@ for($i=0;$i<$allCells;$i++){
         echo "<div class='cell'>";
     }
     echo "<div class='number'>$td[$i]</div>";
-    // if(isset($date) && array_key_exists($date,$specialDate)){
     if(isset($spDate) && array_key_exists($spDate,$specialDate)){
-    // array_key_exists() 檢查給定的key值或索引值是否存在於數組中
-    // 語法：array_key_exists(key,array)
-        echo "<div class='specialDate'>$specialDate[$spDate]</div>";
+     // array_key_exists() 檢查給定的key值或索引值是否存在於數組中
+     // 語法：array_key_exists(key,array)
+    echo "<div class='specialDate'>$specialDate[$spDate]</div>";
     }
     echo "</div>";
 }
 ?>
 
-
-<!-- 母親節 -->
-<!-- <?php
-$month=$_GET['month'];
-if($month==5 && ($td[$i]>7) && ($td[$i]<15)){
-    echo "<div class='specialDate'>母親節</div>";
-}
-?> -->
-
-
 <!-- 跳轉月份 -->
+
 <div class="monthSign">
-     <a class="lastM" href="calendar_3.php?year=<?=$lastyear;?>&month=<?=$lastmonth;?>">◄ Last Month</a>
-     <a class="nextM" href="calendar_3.php?year=<?=$nextyear;?>&month=<?=$nextmonth;?>">Next Month ►</a>
+     <a class="lastM" href="index.php?year=<?=$lastyear;?>&month=<?=$lastmonth;?>">◄ Last Month</a>
+     <a class="nextM" href="index.php?year=<?=$nextyear;?>&month=<?=$nextmonth;?>">Next Month ►</a>
 </div> 
+
+
+
 
 </div>  
 
 </main>
+
+
 </section>
+
 <!-- left end -->
-
-
 
 
 <!-- right -->
@@ -183,22 +175,8 @@ if($month==5 && ($td[$i]>7) && ($td[$i]<15)){
 
 <!-- 草寫英文 -->
 <div class="cursive">
-
-<!-- 修改中 -->
-<!-- <?php
-if($month=date("m")){
-    echo "<img src='$month.png'>";
-}else if($month=$_GET['month']){
-    echo "<img src='$month.png'>";
-
-}
-?> -->
-
-
 <?php
-if($month=date("m")){
-    echo "<img src='$month.png'>";
-}else if($month==1){
+if($month==1){
     echo '<img src="./01.png">';
 }else if($month==2){
     echo '<img src="./02.png">';
@@ -222,8 +200,9 @@ if($month=date("m")){
     echo '<img src="./11.png">';
 }else if($month==12){
     echo '<img src="./12.png">';
+}else {
+    echo "<img src='$month.png'>";
 }
-
 ?>
 
 
@@ -234,27 +213,27 @@ if($month=date("m")){
 
 <!-- right-monthBar -->
 <nav class="monthBar">
-
 <?php
 for($i=1;$i<13;$i++){
-    echo "<a href='calendar_3.php?year=$year&month=$i'>" . $i . "</a>" . "<br>"; 
+    echo "<a href='index.php?year=$year&month=$i'>" . $i . "</a>" . "<br>"; 
 }
 
 ?>
 
 
-<!-- <a href="calendar_3.php?year=<?=$year;?>&month=1">1</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=2">2</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=3">3</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=4">4</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=5">5</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=6">6</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=7">7</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=8">8</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=9">9</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=10">10</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=11">11</a><br>
-<a href="calendar_3.php?year=<?=$year;?>&month=12">12</a><br> -->
+
+<!-- <a href="style_2.php?year=<?=$year;?>&month=1">1</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=2">2</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=3">3</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=4">4</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=5">5</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=6">6</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=7">7</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=8">8</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=9">9</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=10">10</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=11">11</a><br>
+<a href="style_2.php?year=<?=$year;?>&month=12">12</a><br> -->
 
 
 

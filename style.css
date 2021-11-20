@@ -20,7 +20,7 @@ body {
     width: 1344px;
     height: 756px;
     background-image: url(./底圖\(1344x756\).png);
-    margin: 55px auto;
+    margin: 30px auto;
 
 
 }
@@ -61,10 +61,20 @@ body {
 }
 
 .lastYears>a:hover {
-    font-size: 24px;
+    font-size: 28px;
     text-shadow: black 0.2em 0.1em 0.1em;
     color: yellow;
 }
+
+#moon{
+    width:80px;
+    margin:30px 30px 0;
+    
+   
+}
+
+
+
 
 .leftCal {
     flex-basis: calc(100% - 100px);
@@ -83,7 +93,7 @@ body {
 .calendar {
     width: 580px;
     height: 580px;
-    margin: 100px 20px;
+    margin: 10px 20px;
     display: flex;
     flex-wrap: wrap;
     align-content: start;
@@ -94,6 +104,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
 }
+
+
 
 /* 切換月份 */
 .monthSign {
@@ -111,7 +123,9 @@ body {
 .lastM, .nextM {
     font-size: smaller;
     text-decoration: none;
+    color: rgb(177, 255, 255);
 }
+
 
 
 /* 月曆頂端列 */
@@ -128,14 +142,8 @@ body {
     color: white;
 }
 
-/* 切換月份 */
-.lastM {
-    color: white;
-}
 
-.nextM {
-    color: white;
-}
+
 
 .number:hover {
     background-color: rgb(145, 200, 251);
@@ -151,6 +159,7 @@ body {
 }
 
 /* calendar end */
+
 
 
 
@@ -173,13 +182,12 @@ body {
 
 .cursive {
     margin: 140px auto 0;
-    /* border:1px solid rgb(247, 247, 247);   */
+   
 }
 
 .dateTitle {
     color: azure;
     font-size: 50px;
-    /* border:1px solid rgb(247, 247, 247); */
     margin-top: 0;
     flex-basis: 200px;
     text-align: center;
@@ -216,3 +224,5 @@ body {
     text-shadow: black 0.2em 0.1em 0.1em;
     color: yellow;
 }
+
+
