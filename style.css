@@ -30,7 +30,7 @@ body {
 .left {
     width: 730px;
     height: 756px;
-    display: flex;
+    display: flex ;
     flex-flow: row nowrap;
     
 }
@@ -57,7 +57,7 @@ body {
 
 .lastYears>a {
     width: 60px;
-    color: white;
+    color: rgb(250, 253, 211);
     font-size: 20px;
     text-decoration: none;
     line-height: 50px;
@@ -71,27 +71,30 @@ body {
     color: yellow;
 }
 
-#moon{
+
+/* left-yearBar end */
+
+
+/* #moon{
     width:80px;
-    margin:30px 30px 0;
-    
-   
-}
-
-
+    margin:30px 30px 0;  
+} */
 
 
 .leftCal {
     flex-basis: calc(100% - 100px);
+    display: flex;
+    flex-flow: column nowrap;
+   
 }
+
+
 
 .cell {
     width: 70px;
     height: 70px;
     margin: 0;
     box-sizing: border-box;
-    /* align-content:center; */
-    /* justify-content:center; */
     text-align: center;
     
 }
@@ -99,9 +102,8 @@ body {
 
 /* calendar */
 .calendar {
-    width: 550px;
-    height: 550px;
-    margin: 20px 40px;
+    width: 500px;
+    margin: 100px auto 30px;
     display: flex;
     flex-wrap: wrap;
     align-content: start;
@@ -117,21 +119,36 @@ body {
 
 /* 切換月份 */
 .monthSign {
-    margin: 10px 30px;
+    margin: 20px 30px 10px 30px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    width: 560px;
-    padding: 0px 60px 0px -50px;
-    letter-spacing: 3px;
-
-
+    width: 600px;
+    height:600px;
+    letter-spacing: 3px;  /* 字距 */
 }
+
 
 .lastM, .nextM {
     font-size: smaller;
     text-decoration: none;
     color: rgb(107, 183, 228);
+}
+
+
+.today{
+    background-image: linear-gradient(to left, #a16f03, #fcfc7d);
+    box-shadow: 0 0 1em rgb(255, 255, 254);
+    width:80px;
+    height:80px;
+    margin-top: 40px;
+    border-radius: 50%;
+    padding-top:30px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.today>a{
+    text-decoration:none ;
 }
 
 
@@ -141,9 +158,6 @@ body {
     color: yellow;
 }
 
-/* .dayoff cell {
-    color: yellow;
-} */
 
 .number{
     line-height: 70px;
@@ -158,10 +172,11 @@ body {
 }
 
 .specialDate {
-    color: rgb(253, 253, 177);
+    color:  rgb(251, 255, 198);
     font-size: 8px;
     padding-top: 4px;
 }
+
 
 /* calendar end */
 
@@ -212,7 +227,7 @@ body {
 
 .monthBar>a {
     width: 60px;
-    color: white;
+    color: rgb(251, 255, 198);
     font-size: 20px;
     text-decoration: none;
     line-height: 50px;

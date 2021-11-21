@@ -33,7 +33,7 @@ echo "<a href='index.php?year=$i&month=$mm'>". $i ."</a>" . "<br>";
 <!-- left-calendar -->
 <main class="leftCal">
 
-<img id="moon" src="./moon.png" alt="月亮" >
+<!-- <img id="moon" src="./moon.png" alt="月亮" > -->
 
 
 <?php
@@ -108,24 +108,24 @@ echo "<a href='index.php?year=$i&month=$mm'>". $i ."</a>" . "<br>";
 
 <?php
 // 月曆頭
-// foreach($headers as $header){
-//     echo "<div class='cell'>";
-//     echo "$header";
-//     echo "</div>";
-// }
-
-
 foreach($headers as $header){
-    if($headers[0] || $headers[6]){
-        echo "<div class= 'cell','weekend'>";
-        echo "$header";
-        echo "</div>"; 
-    }else if($headers = [1] || [2] || [3] || [4] || [5]){
-    echo "<div class='weekdaysHeader'>";
+    echo "<div class='cell'>";
     echo "$header";
     echo "</div>";
-    }
 }
+
+
+// foreach($headers as $header){
+//     if($headers[0] || $headers[6]){
+//         echo "<div class= 'cell','weekend'>";
+//         echo "$header";
+//         echo "</div>"; 
+//     }else if($headers = [1] || [2] || [3] || [4] || [5]){
+//     echo "<div class='weekdaysHeader'>";
+//     echo "$header";
+//     echo "</div>";
+//     }
+// }
 
 
 
@@ -164,15 +164,16 @@ for($i=0;$i<$allCells;$i++){
 
 <div class="monthSign">
      <a class="lastM" href="index.php?year=<?=$lastyear;?>&month=<?=$lastmonth;?>">◄ Last Month</a>
+     <div class="today"><a  href="index.php?">today</a></div>
      <a class="nextM" href="index.php?year=<?=$nextyear;?>&month=<?=$nextmonth;?>">Next Month ►</a>
 </div> 
-
 
 
 
 </div>  
 
 </main>
+
 
 
 </section>
