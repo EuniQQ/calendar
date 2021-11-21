@@ -123,7 +123,7 @@ body {
 .lastM, .nextM {
     font-size: smaller;
     text-decoration: none;
-    color: rgb(177, 255, 255);
+    color: rgb(107, 183, 228);
 }
 
 
@@ -146,7 +146,7 @@ body {
 
 
 .number:hover {
-    background-color: rgb(145, 200, 251);
+    background-color: rgb(0, 68, 131);
     border-radius: 50%;
     line-height: 50px;
     width: 60%;

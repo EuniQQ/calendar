@@ -93,7 +93,7 @@ echo "<a href='index.php?year=$i&month=$mm'>". $i ."</a>" . "<br>";
     for($i=0;$i<$firstWeekWhiteDays;$i++){
         $td[]="";
     }
-    for($i=0;$i<$monthDays;$i++){ //決定當月有幾周
+    for($i=0;$i<$monthDays;$i++){ 
         $td[]=($i+1);
     }
    for($i=0;$i<$lastWeekWhiteDays;$i++){
@@ -107,7 +107,7 @@ echo "<a href='index.php?year=$i&month=$mm'>". $i ."</a>" . "<br>";
 
 
 <?php
-//月曆頭的地方
+//月曆頭
 foreach($headers as $header){
     echo "<div class='cell'>";
     echo "$header";
@@ -118,7 +118,7 @@ foreach($headers as $header){
 
 
 <?php
-//月曆body的地方
+//月曆body
 for($i=0;$i<$allCells;$i++){
     $w=$i%7;
     // is_numeric — 查變數是數字或數字字符串
