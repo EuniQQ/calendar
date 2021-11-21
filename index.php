@@ -37,7 +37,7 @@ echo "<a href='index.php?year=$i&month=$mm'>". $i ."</a>" . "<br>";
 
 
 <?php
-    $specialDate=['1-1'=>'元旦','2-28'=>'和平紀念日','3-8'=>'婦女節','4-4'=>'兒童節','5-1'=>'勞動節','8-8'=>'父親節','9-3'=>'軍人節','10-10'=>'國慶日','12-25'=>'聖誕節'];
+    $specialDate=['1-1'=>'元旦','2-14'=>'西洋情人節','2-28'=>'和平紀念日','3-8'=>'婦女節','4-4'=>'兒童節','5-1'=>'勞動節','8-8'=>'父親節','9-3'=>'軍人節','9-28'=>'教師節','10-10'=>'國慶日','10-25'=>'臺灣光復節','12-25'=>'聖誕節'];
    
     // isset()判斷變數是否存在
     // $_GET用於收集表單數據
@@ -164,7 +164,7 @@ for($i=0;$i<$allCells;$i++){
 
 <div class="monthSign">
      <a class="lastM" href="index.php?year=<?=$lastyear;?>&month=<?=$lastmonth;?>">◄ Last Month</a>
-     <div class="today"><a  href="index.php?">today</a></div>
+     <div class="today"><a  href="index.php?">Today</a></div>
      <a class="nextM" href="index.php?year=<?=$nextyear;?>&month=<?=$nextmonth;?>">Next Month ►</a>
 </div> 
 
