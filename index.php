@@ -107,12 +107,27 @@ echo "<a href='index.php?year=$i&month=$mm'>". $i ."</a>" . "<br>";
 
 
 <?php
-//月曆頭
+// 月曆頭
+// foreach($headers as $header){
+//     echo "<div class='cell'>";
+//     echo "$header";
+//     echo "</div>";
+// }
+
+
 foreach($headers as $header){
-    echo "<div class='cell'>";
+    if($headers[0] || $headers[6]){
+        echo "<div class= 'cell','weekend'>";
+        echo "$header";
+        echo "</div>"; 
+    }else if($headers = [1] || [2] || [3] || [4] || [5]){
+    echo "<div class='weekdaysHeader'>";
     echo "$header";
     echo "</div>";
+    }
 }
+
+
 
 ?>
 

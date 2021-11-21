@@ -21,8 +21,8 @@ body {
     height: 756px;
     background-image: url(./底圖\(1344x756\).png);
     margin: 30px auto;
-
-
+    
+    
 }
 
 
@@ -32,7 +32,7 @@ body {
     height: 756px;
     display: flex;
     flex-flow: row nowrap;
-
+    
 }
 
 #yearBar {
@@ -41,6 +41,11 @@ body {
 }
 
 
+.yearBar>a {
+    font-size: 18px;
+}
+
+/* 1970-2070數字 */
 .lastYears {
     width: 120px;
     height: 700px;
@@ -81,23 +86,26 @@ body {
 }
 
 .cell {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     margin: 0;
     box-sizing: border-box;
-    padding: 15px 0;
+    /* align-content:center; */
+    /* justify-content:center; */
+    text-align: center;
+    
 }
 
 
 /* calendar */
 .calendar {
-    width: 580px;
-    height: 580px;
-    margin: 10px 20px;
+    width: 550px;
+    height: 550px;
+    margin: 20px 40px;
     display: flex;
     flex-wrap: wrap;
     align-content: start;
-    justify-content: start;
+    justify-content: center;
     text-align: center;
     color: white;
     font-size: 130%;
@@ -109,7 +117,7 @@ body {
 
 /* 切換月份 */
 .monthSign {
-    margin: 0;
+    margin: 10px 30px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -133,23 +141,20 @@ body {
     color: yellow;
 }
 
-.dayoff cell {
+/* .dayoff cell {
     color: yellow;
+} */
+
+.number{
+    line-height: 70px;
+
 }
-
-
-.special-date {
-    color: white;
-}
-
-
 
 
 .number:hover {
     background-color: rgb(0, 68, 131);
     border-radius: 50%;
-    line-height: 50px;
-    width: 60%;
+  
 }
 
 .specialDate {
@@ -179,12 +184,13 @@ body {
     float: left;
 }
 
-
+/* 草寫月份圖 */
 .cursive {
     margin: 140px auto 0;
    
 }
 
+/* 草寫下方的年份 */
 .dateTitle {
     color: azure;
     font-size: 50px;
@@ -215,9 +221,6 @@ body {
     /* border:1px solid rgb(247, 247, 247);   */
 }
 
-.yearBar>a {
-    font-size: 18px;
-}
 
 .monthBar>a:hover {
     font-size: 30px;
