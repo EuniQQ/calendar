@@ -19,7 +19,7 @@ body {
     flex-flow: row nowrap;
     width: 1344px;
     height: 756px;
-    background-image: url(./底圖\(1344x756\).png);
+    background-image: url('./background.png');
     margin: 30px auto;
     
     
