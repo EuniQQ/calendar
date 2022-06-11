@@ -23,7 +23,7 @@
                 <!-- 1970-2070年 -->
                 <div class=lastYears>
                     <?php
-                    $mm = date('m');
+                    $mm = date('n');
                     for ($i = 1970; $i < 2071; $i++) {
                         echo "<a href='index.php?year=$i&month=$mm'>" . $i . "</a>" . "<br>";
                     }
@@ -37,7 +37,7 @@
 
 
                 <?php
-                $specialDate = ['1-1' => '元旦', '2-14' => '西洋情人節', '2-28' => '和平紀念日', '3-8' => '婦女節', '4-4' => '兒童節', '5-1' => '勞動節', '8-8' => '父親節', '9-3' => '軍人節', '9-28' => '教師節', '10-10' => '國慶日', '10-25' => '臺灣光復節', '12-25' => '聖誕節'];
+                $specialDate = ['1-01' => '元旦', '2-14' => '西洋情人節', '2-28' => '和平紀念日', '3-08' => '婦女節', '4-04' => '兒童節', '5-01' => '勞動節', '8-08' => '父親節', '9-03' => '軍人節', '9-28' => '教師節', '10-10' => '國慶日', '10-25' => '臺灣光復節', '12-25' => '聖誕節'];
 
                 // isset()判斷變數是否存在
                 // $_GET用於收集表單數據
@@ -45,8 +45,8 @@
                     $month = $_GET['month'];
                     $year = $_GET['year'];
                 } else {
-                    // 參數m：表示的月份，有前導零
-                    $month = date("m");
+                    // 參數n：表示的月份，無前導零
+                    $month = date("n");
                     // 參數Y：4位數表示的年份 EX.2003
                     $year = date("Y");
                 }
@@ -177,7 +177,7 @@
 
                     <div class="monthSign">
                         <a class="lastM" href="index.php?year=<?= $lastyear; ?>&month=<?= $lastmonth; ?>">◄ Last Month</a>
-                        <div class="today"><a href="index.php?year=<?= date('Y') ?>&month=<?= date('m') ?>&day=<?= date('d') ?>">Today</a></div>
+                        <div class="today"><a href="index.php?year=<?= date('Y') ?>&month=<?= date('n') ?>&day=<?= date('d') ?>">Today</a></div>
                         <a class="nextM" href="index.php?year=<?= $nextyear; ?>&month=<?= $nextmonth; ?>">Next Month ►</a>
                     </div>
 
@@ -204,36 +204,18 @@
 
                 <!-- 草寫英文 -->
                 <div class="cursive">
+                    
                     <?php
                     if ($month == 1) {
-                        echo '<img src="./01.png">';
-                    } else if ($month == 2) {
-                        echo '<img src="./02.png">';
-                    } else if ($month == 3) {
-                        echo '<img src="./03.png">';
-                    } else if ($month == 4) {
-                        echo '<img src="./04.png">';
-                    } else if ($month == 5) {
-                        echo '<img src="./05.png">';
-                    } else if ($month == 6) {
-                        echo '<img src="./06.png">';
-                    } else if ($month == 7) {
-                        echo '<img src="./07.png">';
-                    } else if ($month == 8) {
-                        echo '<img src="./08.png">';
-                    } else if ($month == 9) {
-                        echo '<img src="./09.png">';
-                    } else if ($month == 10) {
-                        echo '<img src="./10.png">';
-                    } else if ($month == 11) {
-                        echo '<img src="./11.png">';
-                    } else if ($month == 12) {
-                        echo '<img src="./12.png">';
+                        echo '<img src="./img/1.png">';
+                    } else if ($month == $i) {
+                        for ($i = 2; $i <= 12; $i++) {
+                            echo '<img src="./img/"' . $i . '"png">';
+                        }
                     } else {
-                        echo "<img src='$month.png'>";
+                        echo "<img src='./img/$month.png'>";
                     }
                     ?>
-
 
                 </div>
                 <h3 class="dateTitle">-&nbsp;<?= $year; ?>&nbsp;-</h3>
